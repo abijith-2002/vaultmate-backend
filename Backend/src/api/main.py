@@ -5,11 +5,11 @@ from .auth import router as auth_router
 
 app = FastAPI(
     title="VaultMate Security API",
-    description="Secure password manager backend with MFA, RBAC, credential sharing, and audit logging.",
+    description="Secure password manager backend with RBAC, credential sharing, and audit logging.",
     version="1.0.0",
     openapi_tags=[
         {"name": "Health", "description": "Service health and metadata."},
-        {"name": "Auth", "description": "User authentication, registration, tokens, MFA."},
+        {"name": "Auth", "description": "User authentication, registration, and token handling via Supabase Auth."},
         {"name": "Vault", "description": "Manage credentials stored in the vault."},
         {"name": "Sharing", "description": "Secure sharing of vault items with other users."},
         {"name": "Audit", "description": "Audit log retrieval (admin)."},
